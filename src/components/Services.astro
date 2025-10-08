@@ -1,0 +1,259 @@
+---
+// Services section
+const services = [
+	{
+		title: "Mantenimiento de Jardines",
+		description: "Poda profesional, limpieza integral, fertilización y control de malezas para mantener tus espacios verdes impecables.",
+		icon: "sprout",
+		category: "jardines"
+	},
+	{
+		title: "Sistemas de Riego",
+		description: "Instalación, mantenimiento y reparación de sistemas de riego eficientes para plantas interiores y exteriores.",
+		icon: "droplets",
+		category: "jardines"
+	},
+	{
+		title: "Paisajismo Profesional",
+		description: "Evaluación personalizada, diseño y mantención de áreas verdes, bosques y canchas deportivas.",
+		icon: "tree",
+		category: "jardines"
+	},
+	{
+		title: "Aseo Industrial",
+		description: "Limpieza profesional de áreas industriales, veredas, barandas y zonas de circulación.",
+		icon: "sparkles",
+		category: "aseo"
+	},
+	{
+		title: "Hidrolavado Especializado",
+		description: "Servicios de hidrolavado para estacionamientos, zonas de carga y áreas logísticas.",
+		icon: "droplets",
+		category: "aseo"
+	},
+	{
+		title: "Limpieza de Instalaciones",
+		description: "Mantenimiento de zonas de descanso, áreas comunes, instalaciones técnicas y salas especializadas.",
+		icon: "shield",
+		category: "aseo"
+	}
+];
+---
+
+<section id="servicios" class="services">
+	<div class="container">
+		<div class="services-header">
+			<div class="badge">
+				<span>Nuestros Servicios</span>
+			</div>
+			<h2>Servicios Profesionales de Áreas Verdes y Aseo Industrial</h2>
+			<p class="services-description">
+				Ofrecemos servicios especializados de mantenimiento de jardines, paisajismo y limpieza industrial con más de 20 años de experiencia en Santiago, Chile.
+			</p>
+		</div>
+
+		<div class="services-grid">
+			{services.map((service) => (
+				<div class="service-card">
+					<div class="service-icon">
+						{service.icon === "sprout" && (
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M7 20h10"></path>
+								<path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+								<path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"></path>
+								<path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"></path>
+							</svg>
+						)}
+						{service.icon === "tree" && (
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"></path>
+								<path d="M12 22v-3"></path>
+							</svg>
+						)}
+						{service.icon === "droplets" && (
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path>
+								<path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path>
+							</svg>
+						)}
+						{service.icon === "hammer" && (
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"></path>
+								<path d="M17.64 15 22 10.64"></path>
+								<path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"></path>
+							</svg>
+						)}
+						{service.icon === "sparkles" && (
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+								<path d="M5 3v4"></path>
+								<path d="M19 17v4"></path>
+								<path d="M3 5h4"></path>
+								<path d="M17 19h4"></path>
+							</svg>
+						)}
+						{service.icon === "shield" && (
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+							</svg>
+						)}
+					</div>
+					<h3>{service.title}</h3>
+					<p>{service.description}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.services {
+		padding: 3rem 0;
+		background: white;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	.services-header {
+		text-align: center;
+		max-width: 48rem;
+		margin: 0 auto 2rem;
+	}
+
+	.badge {
+		display: inline-block;
+		padding: 0.25rem 1rem;
+		border-radius: 9999px;
+		background: rgba(34, 197, 94, 0.2);
+		border: 1px solid rgba(34, 197, 94, 0.3);
+		margin-bottom: 1rem;
+	}
+
+	.badge span {
+		font-size: 0.875rem;
+		font-weight: 500;
+		color: #22c55e;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+		font-weight: 700;
+		color: #111827;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+
+	.services-description {
+		font-size: 1rem;
+		color: #6b7280;
+		line-height: 1.6;
+	}
+
+	.services-grid {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.service-card {
+		background: white;
+		border: 1px solid #e5e7eb;
+		border-radius: 0.5rem;
+		padding: 1.5rem;
+		transition: all 0.3s;
+	}
+
+	.service-card:hover {
+		border-color: rgba(34, 197, 94, 0.5);
+		transform: translateY(-4px);
+		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+	}
+
+	.service-icon {
+		width: 48px;
+		height: 48px;
+		border-radius: 0.5rem;
+		background: rgba(34, 197, 94, 0.2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1rem;
+		transition: background 0.3s;
+	}
+
+	.service-card:hover .service-icon {
+		background: rgba(34, 197, 94, 0.3);
+	}
+
+	.service-icon svg {
+		color: #22c55e;
+	}
+
+	h3 {
+		font-size: 1.125rem;
+		font-weight: 700;
+		color: #111827;
+		margin: 0 0 0.5rem 0;
+	}
+
+	.service-card p {
+		color: #6b7280;
+		line-height: 1.6;
+		margin: 0;
+		font-size: 0.9375rem;
+	}
+
+	@media (min-width: 768px) {
+		.services {
+			padding: 6rem 0;
+		}
+
+		.services-header {
+			margin: 0 auto 4rem;
+		}
+
+		.services-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.5rem;
+		}
+
+		.service-card {
+			padding: 2rem;
+		}
+
+		.service-icon {
+			width: 56px;
+			height: 56px;
+			margin-bottom: 1.5rem;
+		}
+
+		h2 {
+			font-size: 3rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.services-description {
+			font-size: 1.125rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin: 0 0 0.75rem 0;
+		}
+
+		.service-card p {
+			font-size: 1rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.services-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+</style>

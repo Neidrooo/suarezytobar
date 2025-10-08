@@ -1,0 +1,219 @@
+---
+// Footer component
+---
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-grid">
+			<div class="footer-brand">
+				<div class="logo">
+					<div class="logo-icon">
+						<div class="circle circle-1"></div>
+						<div class="circle circle-2"></div>
+					</div>
+					<h3>SUAREZ Y TOBAR</h3>
+				</div>
+				<p>Más de 20 años de experiencia en mantenimiento de áreas verdes y aseo industrial en Santiago, Chile.</p>
+			</div>
+
+			<div class="footer-links">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#servicios">Mantenimiento de Jardines</a></li>
+					<li><a href="#servicios">Paisajismo Profesional</a></li>
+					<li><a href="#servicios">Aseo Industrial</a></li>
+					<li><a href="#servicios">Hidrolavado</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-links">
+				<h4>Contacto</h4>
+				<ul>
+					<li><a href="tel:+56995221924">+56 9 9522 1924</a></li>
+					<li><a href="mailto:empresasuarezytobar76@gmail.com">empresasuarezytobar76@gmail.com</a></li>
+					<li><a href="#nosotros">Santiago, Chile</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-social">
+				<h4>Síguenos</h4>
+				<div class="social-links">
+					<a href="#" aria-label="Facebook">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+						</svg>
+					</a>
+					<a href="#" aria-label="Instagram">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+							<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+							<line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+						</svg>
+					</a>
+					<a href="#" aria-label="LinkedIn">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+							<rect width="4" height="12" x="2" y="9"></rect>
+							<circle cx="4" cy="4" r="2"></circle>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<p>© 2025 Suarez y Tobar Limitada - RUT: 76.229.740-K. Todos los derechos reservados.</p>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		background: #f9fafb;
+		border-top: 1px solid #e5e7eb;
+		padding: 2rem 0;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	.footer-grid {
+		display: grid;
+		gap: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.footer-brand .logo {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.logo-icon {
+		position: relative;
+		width: 40px;
+		height: 40px;
+	}
+
+	.circle {
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+	}
+
+	.circle-1 {
+		background: #22c55e;
+	}
+
+	.circle-2 {
+		background: #86efac;
+		transform: translate(6px, 6px);
+		mix-blend-mode: multiply;
+	}
+
+	.footer-brand h3 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: #111827;
+		margin: 0;
+	}
+
+	.footer-brand p {
+		font-size: 0.875rem;
+		color: #6b7280;
+		line-height: 1.75;
+		margin: 0;
+	}
+
+	.footer-links h4,
+	.footer-social h4 {
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: #111827;
+		margin: 0 0 0.75rem 0;
+	}
+
+	.footer-links ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.footer-links a {
+		font-size: 0.875rem;
+		color: #6b7280;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	.footer-links a:hover {
+		color: #22c55e;
+	}
+
+	.social-links {
+		display: flex;
+		gap: 0.75rem;
+	}
+
+	.social-links a {
+		width: 40px;
+		height: 40px;
+		border-radius: 0.5rem;
+		background: #f3f4f6;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #111827;
+		transition: all 0.2s;
+	}
+
+	.social-links a:hover {
+		background: rgba(34, 197, 94, 0.2);
+		color: #22c55e;
+	}
+
+	.footer-bottom {
+		padding-top: 1.5rem;
+		border-top: 1px solid #e5e7eb;
+		text-align: center;
+	}
+
+	.footer-bottom p {
+		font-size: 0.875rem;
+		color: #6b7280;
+		margin: 0;
+	}
+
+	@media (min-width: 768px) {
+		.footer {
+			padding: 3rem 0;
+		}
+
+		.footer-grid {
+			grid-template-columns: repeat(4, 1fr);
+			gap: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.footer-brand .logo {
+			margin-bottom: 1rem;
+		}
+
+		.footer-links h4,
+		.footer-social h4 {
+			font-size: 1rem;
+			margin: 0 0 1rem 0;
+		}
+
+		.footer-bottom {
+			padding-top: 2rem;
+		}
+	}
+</style>
