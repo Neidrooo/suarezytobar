@@ -1,5 +1,6 @@
 ---
 // Header component
+import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 ---
 
 <header class="header">
@@ -36,37 +37,22 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- Main Header -->
 	<div class="main-header">
 		<div class="container">
 			<div class="header-content">
 				<!-- Logo -->
 				<div class="logo">
-					<div class="logo-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-							<!-- Fondo -->
-							<rect width="100" height="100" rx="20" fill="#22c55e"/>
-							<!-- Letra S -->
-							<path d="M35 30 Q25 30 25 40 Q25 45 30 47 L45 52 Q50 54 50 60 Q50 65 45 65 L30 65" stroke="white" stroke-width="6" stroke-linecap="round" fill="none"/>
-							<!-- Ampersand & -->
-							<text x="50" y="72" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">&</text>
-							<!-- Letra T -->
-							<path d="M60 35 L80 35 M70 35 L70 65" stroke="white" stroke-width="6" stroke-linecap="round"/>
-						</svg>
-					</div>
-					<div class="logo-text">
-						<h1>SUAREZ Y TOBAR</h1>
-						<p>Limitada</p>
-					</div>
+					<img src={logoSuarez.src} alt="Suarez y Tobar Logo" class="logo-image" />
 				</div>
 
 				<!-- Desktop Navigation -->
 				<nav class="nav-desktop">
-					<a href="#inicio">Inicio</a>
-					<a href="#nosotros">Nosotros</a>
-					<a href="#servicios">Servicios</a>
-					<a href="#contacto">Contacto</a>
+					<a href="#inicio" class="nav-link">Inicio</a>
+					<a href="#nosotros" class="nav-link">Nosotros</a>
+					<a href="#servicios" class="nav-link">Servicios</a>
+					<a href="#contacto" class="nav-link">Contacto</a>
+					<a href="#contacto" class="cta-button">Solicitar Cotización</a>
 				</nav>
 
 				<!-- Mobile Menu Button -->
@@ -86,10 +72,11 @@
 
 			<!-- Mobile Menu -->
 			<nav class="nav-mobile" id="mobile-menu">
-				<a href="#inicio">Inicio</a>
-				<a href="#nosotros">Nosotros</a>
-				<a href="#servicios">Servicios</a>
-				<a href="#contacto">Contacto</a>
+				<a href="#inicio" class="mobile-link">Inicio</a>
+				<a href="#nosotros" class="mobile-link">Nosotros</a>
+				<a href="#servicios" class="mobile-link">Servicios</a>
+				<a href="#contacto" class="mobile-link">Contacto</a>
+				<a href="#contacto" class="mobile-cta">Solicitar Cotización</a>
 			</nav>
 		</div>
 	</div>
@@ -101,15 +88,15 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 50;
+		z-index: 100;
 	}
 
 	/* Top Bar */
 	.top-bar {
-		background: rgba(17, 24, 39, 0.95);
+		background: rgba(17, 24, 39, 0.3);
 		backdrop-filter: blur(10px);
-		padding: 0.5rem 0;
-		border-bottom: 1px solid rgba(34, 197, 94, 0.3);
+		padding: 0.375rem 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.top-bar-content {
@@ -121,26 +108,30 @@
 	.phone-link {
 		display: flex;
 		align-items: center;
-		gap: 0.5rem;
+		gap: 0.3rem;
 		color: white;
 		text-decoration: none;
-		font-size: 0.875rem;
+		font-size: 0.6875rem;
 		font-weight: 500;
 		transition: color 0.2s;
+		white-space: nowrap;
 	}
 
 	.phone-link:hover {
-		color: #22c55e;
+		color: #8bc53f;
 	}
 
 	.phone-link svg {
-		color: #22c55e;
+		color: #8bc53f;
+		width: 13px;
+		height: 13px;
+		flex-shrink: 0;
 	}
 
 	.social-links {
 		display: flex;
 		align-items: center;
-		gap: 1rem;
+		gap: 0.5rem;
 	}
 
 	.social-links a {
@@ -149,98 +140,147 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		opacity: 1;
+		position: relative;
+		z-index: 5;
+	}
+
+	.social-links a svg {
+		width: 15px;
+		height: 15px;
 	}
 
 	.social-links a:hover {
-		color: #22c55e;
+		color: #8bc53f;
 		transform: translateY(-2px);
 	}
 
 	/* Main Header */
 	.main-header {
-		background: rgba(255, 255, 255, 0.95);
+		background: rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(10px);
-		border-bottom: 1px solid #e5e7eb;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.container {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 0 1rem;
+		padding: 0 1.5rem;
+		width: 100%;
 	}
 
 	.header-content {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		height: 70px;
+		height: 54px;
+		position: relative;
+		gap: 0.75rem;
 	}
 
 	.logo {
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
+		flex-shrink: 0;
 	}
 
-	.logo-icon {
-		width: 40px;
+	.logo-image {
 		height: 40px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		width: auto;
+		max-width: 140px;
+		object-fit: contain;
+		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+		transition: transform 0.3s ease;
+		display: block;
 	}
 
-	.logo-icon svg {
-		width: 100%;
-		height: 100%;
-		drop-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	}
-
-	.logo-text h1 {
-		font-size: 1.25rem;
-		font-weight: 700;
-		color: #111827;
-		margin: 0;
-		letter-spacing: -0.02em;
-	}
-
-	.logo-text p {
-		font-size: 0.75rem;
-		color: #6b7280;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		margin: 0;
+	.logo-image:hover {
+		transform: scale(1.05);
 	}
 
 	.nav-desktop {
 		display: none;
-		gap: 2rem;
+		align-items: center;
+		gap: 2.5rem;
 	}
 
-	.nav-desktop a {
+	.nav-link {
 		font-size: 0.875rem;
 		font-weight: 500;
-		color: #111827;
+		color: #ffffff;
 		text-decoration: none;
-		transition: color 0.2s;
+		position: relative;
+		transition: color 0.3s ease;
+		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 	}
 
-	.nav-desktop a:hover {
-		color: #22c55e;
+	.nav-link::after {
+		content: '';
+		position: absolute;
+		bottom: -8px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: linear-gradient(90deg, #8bc53f, #7ab82e);
+		transition: width 0.3s ease;
+	}
+
+	.nav-link:hover {
+		color: #8bc53f;
+	}
+
+	.nav-link:hover::after {
+		width: 100%;
+	}
+
+	.cta-button {
+		padding: 0.625rem 1.5rem;
+		background: linear-gradient(135deg, #8bc53f 0%, #7ab82e 100%);
+		color: white;
+		font-size: 0.875rem;
+		font-weight: 600;
+		text-decoration: none;
+		border-radius: 0.5rem;
+		transition: all 0.3s ease;
+		box-shadow: 0 2px 8px rgba(139, 197, 63, 0.3);
+	}
+
+	.cta-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(139, 197, 63, 0.4);
 	}
 
 
 	.menu-button {
-		display: flex;
+		display: flex !important;
 		align-items: center;
-		gap: 0.5rem;
-		background: none;
-		border: none;
+		gap: 0.3rem;
+		background: rgba(139, 197, 63, 0.25);
+		border: 1.5px solid rgba(139, 197, 63, 0.6);
+		border-radius: 0.375rem;
 		cursor: pointer;
-		padding: 0.5rem 1rem;
-		color: #111827;
-		font-weight: 600;
-		font-size: 0.875rem;
+		padding: 0.5rem 0.75rem;
+		color: #ffffff;
+		font-weight: 700;
+		font-size: 0.6875rem;
+		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+		transition: all 0.2s ease;
+		flex-shrink: 0;
+		white-space: nowrap;
+		z-index: 110;
+		position: relative;
+	}
+
+	.menu-button:hover {
+		background: rgba(139, 197, 63, 0.35);
+		border-color: rgba(139, 197, 63, 0.8);
+	}
+
+	.menu-button svg {
+		width: 20px;
+		height: 20px;
+		flex-shrink: 0;
+		stroke-width: 2.5;
 	}
 
 	.menu-text {
@@ -262,47 +302,175 @@
 	.nav-mobile {
 		display: none;
 		flex-direction: column;
-		gap: 1rem;
-		padding: 1rem 0;
-		border-top: 1px solid #e5e7eb;
+		gap: 0.5rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		background: rgba(17, 24, 39, 0.98);
+		backdrop-filter: blur(12px);
+		margin: 0 -1.5rem;
+		padding: 1rem;
+		animation: slideDown 0.3s ease-out;
+	}
+
+	@keyframes slideDown {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	.nav-mobile.active {
 		display: flex;
 	}
 
-	.nav-mobile a {
-		font-size: 0.875rem;
+	.mobile-link {
+		font-size: 0.9375rem;
 		font-weight: 500;
-		color: #111827;
+		color: #ffffff;
 		text-decoration: none;
-		transition: color 0.2s;
+		padding: 0.75rem 1rem;
+		border-radius: 0.5rem;
+		transition: all 0.2s;
+		text-align: left;
+		border-left: 3px solid transparent;
 	}
 
-	.nav-mobile a:hover {
-		color: #22c55e;
+	.mobile-link:hover,
+	.mobile-link:active {
+		color: #8bc53f;
+		background: rgba(139, 197, 63, 0.15);
+		border-left-color: #8bc53f;
 	}
 
+	.mobile-cta {
+		margin-top: 0.5rem;
+		padding: 0.875rem 1.5rem;
+		background: linear-gradient(135deg, #8bc53f 0%, #7ab82e 100%);
+		color: white;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		text-decoration: none;
+		border-radius: 0.5rem;
+		text-align: center;
+		box-shadow: 0 4px 12px rgba(139, 197, 63, 0.4);
+		transition: all 0.3s ease;
+	}
+
+	.mobile-cta:hover,
+	.mobile-cta:active {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 16px rgba(139, 197, 63, 0.5);
+		background: linear-gradient(135deg, #7ab82e 0%, #15803d 100%);
+	}
+
+	/* Small phones - S22 and similar */
+	@media (min-width: 375px) {
+		.phone-link {
+			font-size: 0.75rem;
+			gap: 0.4rem;
+		}
+
+		.phone-link svg {
+			width: 14px;
+			height: 14px;
+		}
+
+		.social-links {
+			gap: 0.7rem;
+		}
+
+		.social-links a svg {
+			width: 17px;
+			height: 17px;
+		}
+
+		.logo-image {
+			height: 44px;
+			max-width: 185px;
+		}
+
+		.header-content {
+			height: 58px;
+			gap: 0.875rem;
+		}
+
+		.menu-button {
+			padding: 0.55rem 0.85rem;
+			font-size: 0.75rem;
+			gap: 0.35rem;
+		}
+
+		.menu-button svg {
+			width: 21px;
+			height: 21px;
+		}
+	}
+
+	/* Tablet and up */
+	@media (min-width: 640px) {
+		.phone-link {
+			font-size: 0.875rem;
+		}
+
+		.phone-link svg {
+			width: 16px;
+			height: 16px;
+		}
+
+		.social-links {
+			gap: 1rem;
+		}
+
+		.social-links a svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		.logo-image {
+			height: 48px;
+			max-width: 220px;
+		}
+
+		.header-content {
+			height: 64px;
+		}
+	}
+
+	/* Desktop */
 	@media (min-width: 768px) {
 		.header-content {
 			height: 80px;
 		}
 
-		.logo-icon {
-			width: 48px;
-			height: 48px;
-		}
-
-		.logo-text h1 {
-			font-size: 1.5rem;
+		.logo-image {
+			height: 65px;
+			max-width: none;
 		}
 
 		.nav-desktop {
-			display: flex;
+			display: flex !important;
 		}
 
 		.menu-button {
-			display: none;
+			display: none !important;
+		}
+
+		.nav-mobile {
+			display: none !important;
+		}
+	}
+
+	/* Force mobile button visibility on small screens */
+	@media (max-width: 767px) {
+		.menu-button {
+			display: flex !important;
+		}
+
+		.nav-desktop {
+			display: none !important;
 		}
 	}
 </style>

@@ -1,126 +1,27 @@
 ---
 // Hero section
+import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 ---
 
 <section id="inicio" class="hero">
 	<div class="hero-background">
-		<img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1920&q=80" alt="Jardín exuberante" />
+		<video autoplay muted loop playsinline class="hero-video">
+			<source src={videoSrc} type="video/mp4" />
+		</video>
 		<div class="hero-overlay"></div>
 	</div>
 
 	<div class="container">
 		<div class="hero-content">
-			<!-- OPCIÓN 1: Badge con gradiente y sombra -->
-			<div class="badge badge-option-1">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-					<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10 Z"></path>
-					<path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-				</svg>
-				<span>Más de 20 Años</span>
-			</div>
-
-			<!-- OPCIÓN 2: Badge minimalista con línea vertical -->
-			<!-- <div class="badge badge-option-2">
-				<div class="badge-line"></div>
-				<div class="badge-content">
-					<span class="badge-year">1975</span>
-					<span class="badge-text">Fundada</span>
-				</div>
-			</div> -->
-
-			<!-- OPCIÓN 3: Badge con icono de estrella y fondo sólido -->
-			<!-- <div class="badge badge-option-3">
-				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-				</svg>
-				<span><strong>50 Años</strong> de Excelencia</span>
-			</div> -->
-
 			<h1>
-				Expertos en <span class="highlight">Áreas Verdes y Aseo Industrial</span>
+				<span class="title-text">Espacios</span>
+				<span class="title-rotating" id="rotating-word"></span>
+				<span class="title-text">que transforman</span>
 			</h1>
 
-			<p class="hero-description">
-				Más de 20 años brindando servicios profesionales de mantenimiento de jardines, paisajismo y limpieza industrial en Santiago, Chile. Calidad, sustentabilidad y seguridad garantizadas.
-			</p>
-
 			<div class="hero-buttons">
-				<a href="#servicios" class="btn btn-primary">
-					Ver Nuestros Servicios
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<line x1="5" y1="12" x2="19" y2="12"></line>
-						<polyline points="12 5 19 12 12 19"></polyline>
-					</svg>
-				</a>
-				<!-- OPCIÓN 1: Botón outline con borde verde -->
-				<a href="#contacto" class="btn btn-outline btn-outline-option-1">Solicitar Cotización</a>
-
-				<!-- OPCIÓN 2: Botón con fondo blanco y sombra -->
-				<!-- <a href="#contacto" class="btn btn-outline btn-outline-option-2">Solicitar Cotización</a> -->
-
-				<!-- OPCIÓN 3: Botón con gradiente suave -->
-				<!-- <a href="#contacto" class="btn btn-outline btn-outline-option-3">Solicitar Cotización</a> -->
+				<a href="#contacto" class="btn btn-primary">Cotizar Ahora</a>
 			</div>
-
-			<!-- OPCIÓN 1: Stats con fondo y separadores verticales -->
-			<div class="stats stats-option-1">
-				<div class="stat">
-					<div class="stat-number">20+</div>
-					<div class="stat-label">Años de Experiencia</div>
-				</div>
-				<div class="stat-divider"></div>
-				<div class="stat">
-					<div class="stat-number">100%</div>
-					<div class="stat-label">Compromiso con Calidad</div>
-				</div>
-				<div class="stat-divider"></div>
-				<div class="stat">
-					<div class="stat-number">24/7</div>
-					<div class="stat-label">Atención Profesional</div>
-				</div>
-			</div>
-
-			<!-- OPCIÓN 2: Stats con iconos y cards individuales -->
-			<!-- <div class="stats stats-option-2">
-				<div class="stat stat-card">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-					</svg>
-					<div class="stat-number">45+</div>
-					<div class="stat-label">Años de Experiencia</div>
-				</div>
-				<div class="stat stat-card">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-					</svg>
-					<div class="stat-number">500+</div>
-					<div class="stat-label">Proyectos Completados</div>
-				</div>
-				<div class="stat stat-card">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-						<circle cx="12" cy="7" r="4"></circle>
-					</svg>
-					<div class="stat-number">98%</div>
-					<div class="stat-label">Clientes Satisfechos</div>
-				</div>
-			</div> -->
-
-			<!-- OPCIÓN 3: Stats minimalistas sin borde -->
-			<!-- <div class="stats stats-option-3">
-				<div class="stat">
-					<div class="stat-number">45+</div>
-					<div class="stat-label">Años de Experiencia</div>
-				</div>
-				<div class="stat">
-					<div class="stat-number">500+</div>
-					<div class="stat-label">Proyectos Completados</div>
-				</div>
-				<div class="stat">
-					<div class="stat-number">98%</div>
-					<div class="stat-label">Clientes Satisfechos</div>
-				</div>
-			</div> -->
 		</div>
 	</div>
 </section>
@@ -131,7 +32,13 @@
 		min-height: 90vh;
 		display: flex;
 		align-items: center;
-		padding: 70px 0 30px;
+		padding: 120px 0 30px;
+	}
+
+	@media (min-width: 768px) {
+		.hero {
+			padding: 140px 0 30px;
+		}
 	}
 
 	.hero-background {
@@ -140,28 +47,33 @@
 		z-index: 0;
 	}
 
-	.hero-background img {
+	.hero-video {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: center center;
+		scale: 1;
 	}
 
 	.hero-overlay {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(to right, rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.65), rgba(17, 24, 39, 0.3));
+		background: linear-gradient(135deg, rgba(17, 24, 39, 0.75) 0%, rgba(17, 24, 39, 0.6) 50%, rgba(34, 197, 94, 0.3) 100%);
 	}
 
 	.container {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 0 1rem;
+		padding: 0 1.5rem;
+		width: 100%;
 		position: relative;
 		z-index: 10;
 	}
 
 	.hero-content {
-		max-width: 48rem;
+		max-width: 36rem;
+		text-align: center;
+		margin: 0 auto;
 	}
 
 	/* OPCIÓN 1: Badge con gradiente y sombra */
@@ -173,7 +85,7 @@
 		border-radius: 9999px;
 		background: rgba(34, 197, 94, 0.2);
 		border: 2px solid #22c55e;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2rem;
 		box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 		backdrop-filter: blur(10px);
 	}
@@ -202,7 +114,7 @@
 	.badge-line {
 		width: 3px;
 		height: 40px;
-		background: linear-gradient(to bottom, #22c55e, #86efac);
+		background: linear-gradient(to bottom, #22c55e, #16a34a);
 		border-radius: 2px;
 	}
 
@@ -254,70 +166,96 @@
 	}
 
 	h1 {
-		font-size: 1.875rem;
-		font-weight: 700;
-		color: #ffffff;
-		margin-bottom: 1rem;
-		line-height: 1.2;
-		text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+		font-size: 2rem;
+		font-weight: 800;
+		margin-bottom: 1.5rem;
+		line-height: 1.4;
+		letter-spacing: -0.02em;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		justify-content: center;
 	}
 
-	.highlight {
-		color: #86efac;
-		text-shadow: 0 2px 10px rgba(34, 197, 94, 0.4);
+	.title-text {
+		color: #ffffff;
+		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+	}
+
+	.title-rotating {
+		color: #8bc53f;
+		text-shadow: 0 2px 8px rgba(139, 197, 63, 0.4);
+		min-width: 150px;
+		display: inline-block;
+		animation: fadeIn 0.5s ease-in;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	.hero-description {
-		font-size: 0.9375rem;
+		font-size: 1rem;
 		color: #e5e7eb;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2rem;
 		line-height: 1.6;
 		max-width: 42rem;
+		margin-left: auto;
+		margin-right: auto;
 		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 	}
 
 	.hero-buttons {
 		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-		margin-bottom: 2.5rem;
+		flex-direction: row;
+		gap: 1rem;
+		justify-content: center;
 	}
 
 	.btn {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		gap: 0.5rem;
-		padding: 0.875rem 1.5rem;
-		font-size: 1rem;
-		font-weight: 500;
+		padding: 0.625rem 1.75rem;
+		font-size: 0.875rem;
+		font-weight: 600;
 		text-decoration: none;
-		border-radius: 0.5rem;
+		border-radius: 6px;
 		transition: all 0.2s;
+		letter-spacing: 0.01em;
 	}
 
 	.btn-primary {
-		background: #22c55e;
+		background: #f37121;
 		color: white;
 		border: none;
+		box-shadow: 0 2px 8px rgba(243, 113, 33, 0.25);
 	}
 
 	.btn-primary:hover {
-		background: #16a34a;
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+		background: #e85d0d;
+		box-shadow: 0 4px 12px rgba(243, 113, 33, 0.3);
 	}
 
 	/* OPCIÓN 1: Botón outline con borde verde */
 	.btn-outline-option-1 {
-		background: white;
-		color: #22c55e;
-		border: 2px solid #22c55e;
+		background: rgba(255, 255, 255, 0.1);
+		color: white;
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(10px);
 	}
 
 	.btn-outline-option-1:hover {
-		background: #22c55e;
-		color: white;
+		background: rgba(255, 255, 255, 0.2);
+		border-color: #22c55e;
+		color: #22c55e;
 		transform: translateY(-2px);
 		box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
 	}
@@ -440,6 +378,18 @@
 		}
 	}
 
+	@media (min-width: 640px) {
+		h1 {
+			font-size: 2.5rem;
+			margin-bottom: 2rem;
+			gap: 0.5rem;
+		}
+
+		.title-rotating {
+			min-width: 180px;
+		}
+	}
+
 	@media (min-width: 768px) {
 		.hero {
 			min-height: 100vh;
@@ -447,26 +397,58 @@
 		}
 
 		h1 {
-			font-size: 4.5rem;
-			margin-bottom: 1.5rem;
+			font-size: 3.5rem;
+			margin-bottom: 2.5rem;
+			gap: 0.6rem;
 		}
 
-		.hero-description {
-			font-size: 1.25rem;
-			margin-bottom: 2rem;
+		.title-rotating {
+			min-width: 250px;
 		}
 
-		.hero-buttons {
-			margin-bottom: 4rem;
+		.btn {
+			padding: 0.875rem 2.5rem;
+			font-size: 1rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		h1 {
+			font-size: 4rem;
+			gap: 0.75rem;
 		}
 
-		.stats {
-			padding-top: 2rem;
-			margin-top: 1rem;
-		}
-
-		.stat-number {
-			font-size: 2.5rem;
+		.title-rotating {
+			min-width: 280px;
 		}
 	}
 </style>
+
+<script>
+	const words = ['Verdes', 'Limpios', 'Cuidados', 'Hermosos', 'Naturales'];
+	let currentIndex = 0;
+	const rotatingWord = document.getElementById('rotating-word');
+
+	function changeWord() {
+		if (rotatingWord) {
+			rotatingWord.style.opacity = '0';
+			rotatingWord.style.transform = 'translateY(-10px)';
+
+			setTimeout(() => {
+				currentIndex = (currentIndex + 1) % words.length;
+				rotatingWord.textContent = words[currentIndex];
+				rotatingWord.style.opacity = '1';
+				rotatingWord.style.transform = 'translateY(0)';
+			}, 300);
+		}
+	}
+
+	// Inicializar con la primera palabra
+	if (rotatingWord) {
+		rotatingWord.textContent = words[0];
+		rotatingWord.style.transition = 'all 0.3s ease';
+	}
+
+	// Cambiar palabra cada 1.5 segundos
+	setInterval(changeWord, 1500);
+</script>

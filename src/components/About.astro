@@ -9,12 +9,9 @@
 				<div class="badge">
 					<span>Nuestra Historia</span>
 				</div>
-				<h2>Más de 20 Años de Experiencia Profesional</h2>
+				<h2>20+ Años de Experiencia</h2>
 				<p class="text-large">
-					Suarez y Tobar Limitada es una empresa con más de 20 años de experiencia en servicios de mantenimiento de áreas verdes y aseo industrial en Santiago, Chile.
-				</p>
-				<p class="text-large">
-					Nuestro equipo capacitado y certificado brinda servicios profesionales de jardinería, paisajismo y limpieza industrial con los más altos estándares de calidad y seguridad.
+					Equipo capacitado y certificado en mantenimiento de áreas verdes y aseo industrial en Santiago, Chile.
 				</p>
 
 				<div class="features">
@@ -24,8 +21,7 @@
 							<polyline points="22 4 12 14.01 9 11.01"></polyline>
 						</svg>
 						<div>
-							<h3>Calidad Profesional</h3>
-							<p>Servicio profesional y técnico de alta calidad en cada proyecto</p>
+							<h3>Calidad</h3>
 						</div>
 					</div>
 					<div class="feature">
@@ -35,7 +31,6 @@
 						</svg>
 						<div>
 							<h3>Sustentabilidad</h3>
-							<p>Respeto por el medio ambiente y prácticas ecológicas</p>
 						</div>
 					</div>
 					<div class="feature">
@@ -44,8 +39,7 @@
 							<polyline points="22 4 12 14.01 9 11.01"></polyline>
 						</svg>
 						<div>
-							<h3>Seguridad Garantizada</h3>
-							<p>Política de cero accidentes y cumplimiento de normas laborales</p>
+							<h3>Seguridad</h3>
 						</div>
 					</div>
 				</div>
@@ -75,7 +69,8 @@
 	.container {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 0 1rem;
+		padding: 0 1.5rem;
+		width: 100%;
 	}
 
 	.about-grid {
@@ -96,7 +91,7 @@
 	.badge span {
 		font-size: 0.875rem;
 		font-weight: 500;
-		color: #22c55e;
+		color: #8bc53f;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 	}
@@ -119,32 +114,27 @@
 	.features {
 		display: flex;
 		flex-direction: column;
-		gap: 0.75rem;
-		margin-top: 1.5rem;
+		gap: 1rem;
+		margin-top: 2rem;
 	}
 
 	.feature {
 		display: flex;
 		gap: 0.75rem;
-		align-items: flex-start;
+		align-items: center;
 	}
 
 	.feature svg {
-		color: #22c55e;
+		color: #8bc53f;
 		flex-shrink: 0;
-		margin-top: 0.25rem;
+		width: 20px;
+		height: 20px;
 	}
 
 	.feature h3 {
-		font-size: 1rem;
+		font-size: 0.9375rem;
 		font-weight: 600;
 		color: #111827;
-		margin: 0 0 0.25rem 0;
-	}
-
-	.feature p {
-		font-size: 0.875rem;
-		color: #6b7280;
 		margin: 0;
 	}
 
@@ -167,14 +157,16 @@
 
 	.stat-card {
 		position: absolute;
-		bottom: -2rem;
-		left: -2rem;
-		background: #86efac;
-		color: #111827;
-		padding: 2rem;
-		border-radius: 0.5rem;
-		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-		max-width: 12rem;
+		bottom: 1.5rem;
+		left: 1.5rem;
+		right: 1.5rem;
+		background: linear-gradient(135deg, #8bc53f 0%, #7ab82e 100%);
+		color: white;
+		padding: 1.5rem;
+		border-radius: 1rem;
+		box-shadow: 0 20px 25px -5px rgba(34, 197, 94, 0.3);
+		max-width: calc(100% - 3rem);
+		backdrop-filter: blur(10px);
 	}
 
 	.stat-card-number {
@@ -186,6 +178,23 @@
 	.stat-card-text {
 		font-size: 0.875rem;
 		line-height: 1.5;
+	}
+
+	@media (min-width: 640px) {
+		.features {
+			flex-direction: row;
+			gap: 1.5rem;
+			flex-wrap: wrap;
+		}
+
+		.feature svg {
+			width: 24px;
+			height: 24px;
+		}
+
+		.feature h3 {
+			font-size: 1rem;
+		}
 	}
 
 	@media (min-width: 768px) {
@@ -207,8 +216,28 @@
 			margin-bottom: 1.5rem;
 		}
 
+		.features {
+			flex-direction: column;
+			gap: 1.5rem;
+		}
+
 		.image-wrapper {
 			height: 600px;
+		}
+
+		.stat-card {
+			bottom: 2rem;
+			left: 2rem;
+			right: auto;
+			max-width: 14rem;
+			padding: 2rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.features {
+			flex-direction: row;
+			gap: 2rem;
 		}
 	}
 </style>
