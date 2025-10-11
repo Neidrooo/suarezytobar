@@ -1,77 +1,118 @@
 ---
 // Footer component
+import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 ---
 
 <footer class="footer">
 	<div class="container">
-		<div class="footer-grid">
+		<div class="footer-main">
+			<!-- Logo y Descripción -->
 			<div class="footer-brand">
-				<div class="logo">
-					<div class="logo-icon">
-						<div class="circle circle-1"></div>
-						<div class="circle circle-2"></div>
-					</div>
-					<h3>SUAREZ Y TOBAR</h3>
+				<img src={logoSuarez.src} alt="Suarez y Tobar Logo" class="footer-logo" />
+				<p class="brand-tagline">Transformando espacios verdes desde 2005</p>
+			</div>
+
+			<!-- Grid de Información -->
+			<div class="footer-grid">
+				<!-- Servicios Destacados -->
+				<div class="footer-section">
+					<h4 class="section-title">Servicios</h4>
+					<ul class="service-list">
+						<li><a href="#servicios">Mantenimiento de Jardines</a></li>
+						<li><a href="#servicios">Paisajismo Profesional</a></li>
+						<li><a href="#servicios">Aseo Industrial</a></li>
+						<li><a href="#servicios">Hidrolavado Especializado</a></li>
+					</ul>
 				</div>
-				<p>Más de 20 años de experiencia en mantenimiento de áreas verdes y aseo industrial en Santiago, Chile.</p>
-			</div>
 
-			<div class="footer-links">
-				<h4>Servicios</h4>
-				<ul>
-					<li><a href="#servicios">Mantenimiento de Jardines</a></li>
-					<li><a href="#servicios">Paisajismo Profesional</a></li>
-					<li><a href="#servicios">Aseo Industrial</a></li>
-					<li><a href="#servicios">Hidrolavado</a></li>
-				</ul>
-			</div>
+				<!-- Información de Contacto -->
+				<div class="footer-section">
+					<h4 class="section-title">Contacto</h4>
+					<div class="contact-info">
+						<a href="tel:+56995221924" class="contact-item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+							</svg>
+							+56 9 9522 1924
+						</a>
+						<a href="mailto:empresasuarezytobar76@gmail.com" class="contact-item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+								<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+							</svg>
+							empresasuarezytobar76@gmail.com
+						</a>
+						<div class="contact-item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+								<circle cx="12" cy="10" r="3"></circle>
+							</svg>
+							Santiago, Chile
+						</div>
+					</div>
+				</div>
 
-			<div class="footer-links">
-				<h4>Contacto</h4>
-				<ul>
-					<li><a href="tel:+56995221924">+56 9 9522 1924</a></li>
-					<li><a href="mailto:empresasuarezytobar76@gmail.com">empresasuarezytobar76@gmail.com</a></li>
-					<li><a href="#nosotros">Santiago, Chile</a></li>
-				</ul>
-			</div>
-
-			<div class="footer-social">
-				<h4>Síguenos</h4>
-				<div class="social-links">
-					<a href="#" aria-label="Facebook">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-							<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-						</svg>
-					</a>
-					<a href="#" aria-label="Instagram">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-							<rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-							<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-							<line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-						</svg>
-					</a>
-					<a href="#" aria-label="LinkedIn">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-							<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-							<rect width="4" height="12" x="2" y="9"></rect>
-							<circle cx="4" cy="4" r="2"></circle>
-						</svg>
-					</a>
+				<!-- Certificaciones -->
+				<div class="footer-section">
+					<h4 class="section-title">Certificaciones</h4>
+					<div class="certifications">
+						<div class="cert-item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+								<path d="m9 12 2 2 4-4"></path>
+							</svg>
+							<span>Empresa Certificada</span>
+						</div>
+						<div class="cert-item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<circle cx="12" cy="12" r="10"></circle>
+								<path d="m9 12 2 2 4-4"></path>
+							</svg>
+							<span>+20 Años Experiencia</span>
+						</div>
+						<div class="cert-item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+								<polyline points="22 4 12 14.01 9 11.01"></polyline>
+							</svg>
+							<span>Personal Capacitado</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 
+		<!-- Footer Bottom -->
 		<div class="footer-bottom">
-			<p>© 2025 Suarez y Tobar Limitada - RUT: 76.229.740-K. Todos los derechos reservados.</p>
+			<div class="bottom-left">
+				<p>© 2025 Suarez y Tobar Limitada</p>
+				<span class="rut">RUT: 76.229.740-K</span>
+			</div>
+			<div class="bottom-right">
+				<a href="#privacidad">Privacidad</a>
+				<span>•</span>
+				<a href="#terminos">Términos</a>
+			</div>
 		</div>
 	</div>
 </footer>
 
 <style>
 	.footer {
-		background: #f9fafb;
-		border-top: 1px solid #e5e7eb;
-		padding: 2rem 0;
+		background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+		position: relative;
+		overflow: hidden;
+		padding: 3rem 0 0;
+	}
+
+	.footer::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: linear-gradient(90deg, transparent, #8bc53f, transparent);
 	}
 
 	.container {
@@ -81,140 +122,297 @@
 		width: 100%;
 	}
 
+	/* Main Footer */
+	.footer-main {
+		padding-bottom: 2.5rem;
+		border-bottom: 1px solid rgba(139, 197, 63, 0.15);
+	}
+
+	/* Brand */
+	.footer-brand {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.footer-logo {
+		height: 65px;
+		width: auto;
+		max-width: 240px;
+		object-fit: contain;
+		filter: brightness(1.15);
+		margin: 0 auto 1rem;
+		transition: transform 0.3s ease;
+	}
+
+	.footer-logo:hover {
+		transform: scale(1.05);
+	}
+
+	.brand-tagline {
+		font-size: 0.9375rem;
+		color: #94a3b8;
+		font-weight: 500;
+		margin: 0;
+		letter-spacing: 0.02em;
+	}
+
+	/* Grid */
 	.footer-grid {
 		display: grid;
-		gap: 1.5rem;
-		margin-bottom: 1.5rem;
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
 	}
 
-	.footer-brand .logo {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		margin-bottom: 0.75rem;
+	.footer-section {
+		text-align: center;
 	}
 
-	.logo-icon {
-		position: relative;
-		width: 40px;
-		height: 40px;
-	}
-
-	.circle {
-		position: absolute;
-		inset: 0;
-		border-radius: 50%;
-	}
-
-	.circle-1 {
-		background: #22c55e;
-	}
-
-	.circle-2 {
-		background: rgba(34, 197, 94, 0.5);
-		transform: translate(6px, 6px);
-		mix-blend-mode: multiply;
-	}
-
-	.footer-brand h3 {
-		font-size: 1.25rem;
+	.section-title {
+		font-size: 1rem;
 		font-weight: 700;
-		color: #111827;
-		margin: 0;
+		color: #ffffff;
+		margin: 0 0 1.25rem 0;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		position: relative;
+		display: inline-block;
 	}
 
-	.footer-brand p {
-		font-size: 0.875rem;
-		color: #6b7280;
-		line-height: 1.75;
-		margin: 0;
+	.section-title::after {
+		content: '';
+		position: absolute;
+		bottom: -0.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 30px;
+		height: 2px;
+		background: #8bc53f;
 	}
 
-	.footer-links h4,
-	.footer-social h4 {
-		font-size: 0.9375rem;
-		font-weight: 600;
-		color: #111827;
-		margin: 0 0 0.75rem 0;
-	}
-
-	.footer-links ul {
+	/* Services */
+	.service-list {
 		list-style: none;
 		padding: 0;
 		margin: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: 0.625rem;
 	}
 
-	.footer-links a {
-		font-size: 0.875rem;
-		color: #6b7280;
+	.service-list a {
+		color: #cbd5e1;
 		text-decoration: none;
-		transition: color 0.2s;
+		font-size: 0.9375rem;
+		transition: all 0.3s ease;
+		display: inline-block;
+		position: relative;
 	}
 
-	.footer-links a:hover {
-		color: #22c55e;
+	.service-list a::before {
+		content: '→';
+		position: absolute;
+		left: -1.5rem;
+		opacity: 0;
+		color: #8bc53f;
+		transition: all 0.3s ease;
 	}
 
-	.social-links {
+	.service-list a:hover {
+		color: #8bc53f;
+		padding-left: 1.5rem;
+	}
+
+	.service-list a:hover::before {
+		opacity: 1;
+		left: 0;
+	}
+
+	/* Contact */
+	.contact-info {
 		display: flex;
-		gap: 0.75rem;
+		flex-direction: column;
+		gap: 0.875rem;
+		align-items: center;
 	}
 
-	.social-links a {
-		width: 40px;
-		height: 40px;
-		border-radius: 0.5rem;
-		background: #f3f4f6;
+	.contact-item {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		color: #111827;
-		transition: all 0.2s;
+		gap: 0.625rem;
+		color: #cbd5e1;
+		text-decoration: none;
+		font-size: 0.875rem;
+		transition: all 0.3s ease;
+		padding: 0.5rem 1rem;
+		border-radius: 0.5rem;
+		background: rgba(139, 197, 63, 0.05);
+		border: 1px solid transparent;
 	}
 
-	.social-links a:hover {
-		background: rgba(34, 197, 94, 0.2);
-		color: #22c55e;
+	.contact-item svg {
+		color: #8bc53f;
+		flex-shrink: 0;
 	}
 
+	.contact-item:hover,
+	a.contact-item:hover {
+		color: #ffffff;
+		background: rgba(139, 197, 63, 0.1);
+		border-color: rgba(139, 197, 63, 0.3);
+		transform: translateY(-2px);
+	}
+
+	/* Certifications */
+	.certifications {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		align-items: center;
+	}
+
+	.cert-item {
+		display: flex;
+		align-items: center;
+		gap: 0.625rem;
+		color: #8bc53f;
+		font-size: 0.875rem;
+		font-weight: 600;
+		padding: 0.625rem 1.25rem;
+		background: rgba(139, 197, 63, 0.08);
+		border: 1px solid rgba(139, 197, 63, 0.2);
+		border-radius: 2rem;
+		transition: all 0.3s ease;
+	}
+
+	.cert-item svg {
+		flex-shrink: 0;
+	}
+
+	.cert-item:hover {
+		background: rgba(139, 197, 63, 0.15);
+		border-color: rgba(139, 197, 63, 0.4);
+		transform: scale(1.05);
+	}
+
+	/* Footer Bottom */
 	.footer-bottom {
-		padding-top: 1.5rem;
-		border-top: 1px solid #e5e7eb;
+		padding: 1.75rem 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
 		text-align: center;
 	}
 
-	.footer-bottom p {
+	.bottom-left {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.bottom-left p {
 		font-size: 0.875rem;
-		color: #6b7280;
+		color: #94a3b8;
 		margin: 0;
+		font-weight: 500;
+	}
+
+	.rut {
+		font-size: 0.8125rem;
+		color: #64748b;
+	}
+
+	.bottom-right {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		font-size: 0.8125rem;
+	}
+
+	.bottom-right a {
+		color: #94a3b8;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.bottom-right a:hover {
+		color: #8bc53f;
+	}
+
+	.bottom-right span {
+		color: #475569;
+	}
+
+	/* Responsive */
+	@media (min-width: 640px) {
+		.footer-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 3rem;
+		}
+
+		.footer-section {
+			text-align: left;
+		}
+
+		.section-title::after {
+			left: 0;
+			transform: none;
+		}
+
+		.contact-info {
+			align-items: flex-start;
+		}
+
+		.certifications {
+			align-items: flex-start;
+		}
+
+		.service-list a:hover {
+			padding-left: 0;
+		}
 	}
 
 	@media (min-width: 768px) {
 		.footer {
-			padding: 3rem 0;
+			padding: 4rem 0 0;
 		}
 
-		.footer-grid {
-			grid-template-columns: repeat(4, 1fr);
-			gap: 2rem;
-			margin-bottom: 2rem;
+		.footer-brand {
+			text-align: left;
+			margin-bottom: 3.5rem;
 		}
 
-		.footer-brand .logo {
-			margin-bottom: 1rem;
-		}
-
-		.footer-links h4,
-		.footer-social h4 {
-			font-size: 1rem;
+		.footer-logo {
+			height: 75px;
+			max-width: 280px;
 			margin: 0 0 1rem 0;
 		}
 
+		.brand-tagline {
+			font-size: 1rem;
+		}
+
+		.footer-grid {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 4rem;
+		}
+
 		.footer-bottom {
-			padding-top: 2rem;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 2rem 0;
+		}
+
+		.bottom-left {
+			flex-direction: row;
+			align-items: center;
+			gap: 1rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.footer-main {
+			padding-bottom: 3rem;
 		}
 	}
 </style>

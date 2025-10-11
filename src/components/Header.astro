@@ -70,17 +70,80 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 				</button>
 			</div>
 
-			<!-- Mobile Menu -->
-			<nav class="nav-mobile" id="mobile-menu">
-				<a href="#inicio" class="mobile-link">Inicio</a>
-				<a href="#nosotros" class="mobile-link">Nosotros</a>
-				<a href="#servicios" class="mobile-link">Servicios</a>
-				<a href="#contacto" class="mobile-link">Contacto</a>
-				<a href="#contacto" class="mobile-cta">Solicitar Cotización</a>
-			</nav>
 		</div>
 	</div>
+
+	<!-- Mobile Menu Fullscreen -->
+	<nav class="nav-mobile" id="mobile-menu">
+		<div class="mobile-menu-overlay">
+			<!-- Close Button -->
+			<button class="close-menu-btn" id="close-menu-btn" aria-label="Cerrar menú">
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<line x1="18" y1="6" x2="6" y2="18"></line>
+					<line x1="6" y1="6" x2="18" y2="18"></line>
+				</svg>
+			</button>
+
+			<div class="mobile-menu-content">
+				<div class="mobile-menu-header">
+					<img src={logoSuarez.src} alt="Suarez y Tobar" class="mobile-logo" />
+					<p class="menu-subtitle">Menú de Navegación</p>
+				</div>
+				
+				<div class="mobile-menu-links">
+					<a href="#inicio" class="mobile-link" data-index="1">
+						<span class="link-number">01</span>
+						<span class="link-text">Inicio</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<polyline points="9 18 15 12 9 6"></polyline>
+						</svg>
+					</a>
+					<a href="#nosotros" class="mobile-link" data-index="2">
+						<span class="link-number">02</span>
+						<span class="link-text">Nosotros</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<polyline points="9 18 15 12 9 6"></polyline>
+						</svg>
+					</a>
+					<a href="#servicios" class="mobile-link" data-index="3">
+						<span class="link-number">03</span>
+						<span class="link-text">Servicios</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<polyline points="9 18 15 12 9 6"></polyline>
+						</svg>
+					</a>
+					<a href="#contacto" class="mobile-link" data-index="4">
+						<span class="link-number">04</span>
+						<span class="link-text">Contacto</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<polyline points="9 18 15 12 9 6"></polyline>
+						</svg>
+					</a>
+				</div>
+
+				<div class="mobile-menu-footer">
+					<a href="#contacto" class="mobile-cta">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+						</svg>
+						Solicitar Cotización
+					</a>
+					
+					<div class="mobile-contact-info">
+						<a href="tel:+56995221924" class="contact-item-small">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+							</svg>
+							+56 9 9522 1924
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
 </header>
+
+<div class="mobile-menu-backdrop" id="menu-backdrop"></div>
 
 <style>
 	.header {
@@ -299,22 +362,183 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 		display: block;
 	}
 
-	.nav-mobile {
-		display: none;
-		flex-direction: column;
-		gap: 0.5rem;
-		border-top: 1px solid rgba(255, 255, 255, 0.2);
-		background: rgba(17, 24, 39, 0.98);
-		backdrop-filter: blur(12px);
-		margin: 0 -1.5rem;
-		padding: 1rem;
-		animation: slideDown 0.3s ease-out;
+	/* Mobile Menu Backdrop */
+	.mobile-menu-backdrop {
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.8);
+		backdrop-filter: blur(8px);
+		z-index: 98;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.4s ease;
 	}
 
-	@keyframes slideDown {
+	.mobile-menu-backdrop.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/* Mobile Menu Fullscreen */
+	.nav-mobile {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		z-index: 999;
+		transition: right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	.nav-mobile.active {
+		right: 0;
+	}
+
+	.mobile-menu-overlay {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.mobile-menu-overlay::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		right: -50%;
+		width: 200%;
+		height: 200%;
+		background: radial-gradient(circle, rgba(139, 197, 63, 0.1) 0%, transparent 70%);
+		animation: rotate 20s linear infinite;
+	}
+
+	@keyframes rotate {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); }
+	}
+
+	/* Close Button */
+	.close-menu-btn {
+		position: absolute;
+		top: 1.5rem;
+		right: 1.5rem;
+		z-index: 10;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: rgba(139, 197, 63, 0.15);
+		border: 2px solid rgba(139, 197, 63, 0.4);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		color: #8bc53f;
+		animation: pulseClose 2s ease-in-out infinite;
+	}
+
+	@keyframes pulseClose {
+		0%, 100% {
+			box-shadow: 0 0 0 0 rgba(139, 197, 63, 0.4);
+		}
+		50% {
+			box-shadow: 0 0 0 10px rgba(139, 197, 63, 0);
+		}
+	}
+
+	.close-menu-btn:active {
+		transform: scale(0.95);
+		background: rgba(139, 197, 63, 0.25);
+		border-color: #8bc53f;
+	}
+
+	.mobile-menu-content {
+		position: relative;
+		z-index: 2;
+		height: 100%;
+		height: 100dvh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1.5rem 1.25rem;
+		overflow: hidden;
+	}
+
+	.mobile-menu-header {
+		text-align: center;
+		padding: 0.5rem 0;
+		animation: fadeInDown 0.6s ease-out;
+		flex-shrink: 0;
+	}
+
+	.mobile-logo {
+		height: 50px;
+		width: auto;
+		filter: brightness(1.2);
+		margin-bottom: 0.5rem;
+	}
+
+	.menu-subtitle {
+		font-size: 0.75rem;
+		color: #8bc53f;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin: 0;
+		font-weight: 600;
+	}
+
+	.mobile-menu-links {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.75rem;
+		padding: 1rem 0;
+		overflow-y: auto;
+		max-height: calc(100dvh - 280px);
+	}
+
+	.mobile-link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 1.25rem;
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(139, 197, 63, 0.2);
+		border-radius: 0.875rem;
+		color: #ffffff;
+		text-decoration: none;
+		font-size: 1.25rem;
+		font-weight: 700;
+		transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		position: relative;
+		overflow: hidden;
+		opacity: 0;
+		transform: translateX(50px);
+		flex-shrink: 0;
+	}
+
+	.nav-mobile.active .mobile-link {
+		animation: slideInRight 0.6s ease-out forwards;
+	}
+
+	.nav-mobile.active .mobile-link[data-index="1"] { animation-delay: 0.1s; }
+	.nav-mobile.active .mobile-link[data-index="2"] { animation-delay: 0.2s; }
+	.nav-mobile.active .mobile-link[data-index="3"] { animation-delay: 0.3s; }
+	.nav-mobile.active .mobile-link[data-index="4"] { animation-delay: 0.4s; }
+
+	@keyframes slideInRight {
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes fadeInDown {
 		from {
 			opacity: 0;
-			transform: translateY(-10px);
+			transform: translateY(-30px);
 		}
 		to {
 			opacity: 1;
@@ -322,48 +546,119 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 		}
 	}
 
-	.nav-mobile.active {
-		display: flex;
+	.mobile-link::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(139, 197, 63, 0.2), transparent);
+		transition: left 0.5s ease;
 	}
 
-	.mobile-link {
-		font-size: 0.9375rem;
-		font-weight: 500;
-		color: #ffffff;
-		text-decoration: none;
-		padding: 0.75rem 1rem;
-		border-radius: 0.5rem;
-		transition: all 0.2s;
-		text-align: left;
-		border-left: 3px solid transparent;
+	.mobile-link:active::before {
+		left: 100%;
 	}
 
-	.mobile-link:hover,
-	.mobile-link:active {
+	.link-number {
+		font-size: 0.875rem;
 		color: #8bc53f;
+		font-weight: 600;
+		opacity: 0.7;
+	}
+
+	.link-text {
+		flex: 1;
+		text-align: left;
+		margin-left: 1rem;
+	}
+
+	.mobile-link svg {
+		opacity: 0;
+		transform: translateX(-10px);
+		transition: all 0.3s ease;
+		color: #8bc53f;
+	}
+
+	.mobile-link:active {
+		transform: scale(0.98);
 		background: rgba(139, 197, 63, 0.15);
-		border-left-color: #8bc53f;
+		border-color: #8bc53f;
+	}
+
+	.mobile-link:active svg {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.mobile-menu-footer {
+		animation: fadeInUp 0.6s ease-out 0.5s backwards;
+		flex-shrink: 0;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	.mobile-cta {
-		margin-top: 0.5rem;
-		padding: 0.875rem 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.625rem;
+		width: 100%;
+		padding: 1rem 1.5rem;
 		background: linear-gradient(135deg, #8bc53f 0%, #7ab82e 100%);
 		color: white;
-		font-size: 0.9375rem;
-		font-weight: 600;
+		font-size: 1rem;
+		font-weight: 700;
 		text-decoration: none;
-		border-radius: 0.5rem;
-		text-align: center;
-		box-shadow: 0 4px 12px rgba(139, 197, 63, 0.4);
+		border-radius: 0.875rem;
+		box-shadow: 0 6px 20px rgba(139, 197, 63, 0.4);
+		transition: all 0.3s ease;
+		margin-bottom: 1rem;
+	}
+
+	.mobile-cta:active {
+		transform: scale(0.98);
+		box-shadow: 0 4px 12px rgba(139, 197, 63, 0.3);
+	}
+
+	.mobile-contact-info {
+		display: flex;
+		justify-content: center;
+	}
+
+	.contact-item-small {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.625rem 1rem;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 0.625rem;
+		color: #d1d5db;
+		text-decoration: none;
+		font-size: 0.8125rem;
 		transition: all 0.3s ease;
 	}
 
-	.mobile-cta:hover,
-	.mobile-cta:active {
-		transform: translateY(-2px);
-		box-shadow: 0 6px 16px rgba(139, 197, 63, 0.5);
-		background: linear-gradient(135deg, #7ab82e 0%, #15803d 100%);
+	.contact-item-small svg {
+		color: #8bc53f;
+		flex-shrink: 0;
+	}
+
+	.contact-item-small:active {
+		background: rgba(139, 197, 63, 0.1);
+		border-color: rgba(139, 197, 63, 0.3);
+		color: #ffffff;
 	}
 
 	/* Small phones - S22 and similar */
@@ -478,18 +773,42 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 <script>
 	const menuButton = document.getElementById('menu-button');
 	const mobileMenu = document.getElementById('mobile-menu');
+	const menuBackdrop = document.getElementById('menu-backdrop');
+	const closeMenuBtn = document.getElementById('close-menu-btn');
 
+	function closeMenu() {
+		menuButton?.classList.remove('active');
+		mobileMenu?.classList.remove('active');
+		menuBackdrop?.classList.remove('active');
+		document.body.style.overflow = '';
+	}
+
+	function openMenu() {
+		menuButton?.classList.add('active');
+		mobileMenu?.classList.add('active');
+		menuBackdrop?.classList.add('active');
+		document.body.style.overflow = 'hidden';
+	}
+
+	// Toggle menu
 	menuButton?.addEventListener('click', () => {
-		menuButton.classList.toggle('active');
-		mobileMenu?.classList.toggle('active');
+		const isActive = menuButton.classList.contains('active');
+		if (isActive) {
+			closeMenu();
+		} else {
+			openMenu();
+		}
 	});
+
+	// Close button
+	closeMenuBtn?.addEventListener('click', closeMenu);
+
+	// Close menu when clicking backdrop
+	menuBackdrop?.addEventListener('click', closeMenu);
 
 	// Close mobile menu when clicking on a link
 	const mobileLinks = mobileMenu?.querySelectorAll('a');
 	mobileLinks?.forEach(link => {
-		link.addEventListener('click', () => {
-			menuButton?.classList.remove('active');
-			mobileMenu?.classList.remove('active');
-		});
+		link.addEventListener('click', closeMenu);
 	});
 </script>
