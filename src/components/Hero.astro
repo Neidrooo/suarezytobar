@@ -76,95 +76,6 @@ import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 		margin: 0 auto;
 	}
 
-	/* OPCIÓN 1: Badge con gradiente y sombra */
-	.badge-option-1 {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		padding: 0.5rem 1.25rem;
-		border-radius: 9999px;
-		background: rgba(34, 197, 94, 0.2);
-		border: 2px solid #22c55e;
-		margin-bottom: 2rem;
-		box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-		backdrop-filter: blur(10px);
-	}
-
-	.badge-option-1 svg {
-		color: #16a34a;
-	}
-
-	.badge-option-1 span {
-		font-size: 0.875rem;
-		font-weight: 600;
-		color: #ffffff;
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
-	}
-
-	/* OPCIÓN 2: Badge minimalista con línea vertical */
-	.badge-option-2 {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.75rem;
-		padding: 0.5rem 0;
-		margin-bottom: 1.5rem;
-	}
-
-	.badge-line {
-		width: 3px;
-		height: 40px;
-		background: linear-gradient(to bottom, #22c55e, #16a34a);
-		border-radius: 2px;
-	}
-
-	.badge-content {
-		display: flex;
-		flex-direction: column;
-		gap: 0.125rem;
-	}
-
-	.badge-year {
-		font-size: 1.25rem;
-		font-weight: 700;
-		color: #22c55e;
-		line-height: 1;
-	}
-
-	.badge-text {
-		font-size: 0.75rem;
-		font-weight: 500;
-		color: #6b7280;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-	}
-
-	/* OPCIÓN 3: Badge con icono de estrella y fondo sólido */
-	.badge-option-3 {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		padding: 0.625rem 1.25rem;
-		border-radius: 0.5rem;
-		background: #22c55e;
-		margin-bottom: 1.5rem;
-		box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-	}
-
-	.badge-option-3 svg {
-		color: white;
-	}
-
-	.badge-option-3 span {
-		font-size: 0.875rem;
-		font-weight: 500;
-		color: white;
-	}
-
-	.badge-option-3 strong {
-		font-weight: 700;
-	}
-
 	h1 {
 		font-size: 2rem;
 		font-weight: 800;
@@ -179,15 +90,16 @@ import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 
 	.title-text {
 		color: #ffffff;
-		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+		text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
 	}
 
 	.title-rotating {
 		color: #8bc53f;
-		text-shadow: 0 2px 8px rgba(139, 197, 63, 0.4);
-		min-width: 150px;
+		text-shadow: 0 4px 20px rgba(139, 197, 63, 0.6), 0 2px 10px rgba(139, 197, 63, 0.4);
+		min-width: 200px;
 		display: inline-block;
 		animation: fadeIn 0.5s ease-in;
+		text-align: center;
 	}
 
 	@keyframes fadeIn {
@@ -201,17 +113,6 @@ import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 		}
 	}
 
-	.hero-description {
-		font-size: 1rem;
-		color: #e5e7eb;
-		margin-bottom: 2rem;
-		line-height: 1.6;
-		max-width: 42rem;
-		margin-left: auto;
-		margin-right: auto;
-		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-	}
-
 	.hero-buttons {
 		display: flex;
 		flex-direction: row;
@@ -223,148 +124,29 @@ import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0.625rem 1.75rem;
-		font-size: 0.875rem;
+		padding: 0.875rem 2rem;
+		font-size: 0.9375rem;
 		font-weight: 600;
 		text-decoration: none;
-		border-radius: 6px;
-		transition: all 0.2s;
+		border-radius: 50px;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		letter-spacing: 0.01em;
 	}
 
 	.btn-primary {
-		background: #f37121;
+		background: linear-gradient(135deg, #f37121 0%, #e85d0d 100%);
 		color: white;
 		border: none;
-		box-shadow: 0 2px 8px rgba(243, 113, 33, 0.25);
+		box-shadow: 0 8px 24px rgba(243, 113, 33, 0.3), 0 4px 8px rgba(243, 113, 33, 0.2);
 	}
 
 	.btn-primary:hover {
-		background: #e85d0d;
-		box-shadow: 0 4px 12px rgba(243, 113, 33, 0.3);
+		transform: translateY(-3px);
+		box-shadow: 0 12px 32px rgba(243, 113, 33, 0.4), 0 6px 12px rgba(243, 113, 33, 0.3);
 	}
 
-	/* OPCIÓN 1: Botón outline con borde verde */
-	.btn-outline-option-1 {
-		background: rgba(255, 255, 255, 0.1);
-		color: white;
-		border: 2px solid rgba(255, 255, 255, 0.3);
-		backdrop-filter: blur(10px);
-	}
-
-	.btn-outline-option-1:hover {
-		background: rgba(255, 255, 255, 0.2);
-		border-color: #22c55e;
-		color: #22c55e;
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-	}
-
-	/* OPCIÓN 2: Botón con fondo blanco y sombra */
-	.btn-outline-option-2 {
-		background: white;
-		color: #111827;
-		border: none;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	}
-
-	.btn-outline-option-2:hover {
-		background: white;
-		transform: translateY(-2px);
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-	}
-
-	/* OPCIÓN 3: Botón con gradiente suave */
-	.btn-outline-option-3 {
-		background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(134, 239, 172, 0.2));
-		color: #16a34a;
-		border: 1px solid rgba(34, 197, 94, 0.3);
-		font-weight: 600;
-	}
-
-	.btn-outline-option-3:hover {
-		background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(134, 239, 172, 0.3));
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
-	}
-
-	/* OPCIÓN 1: Stats con fondo y separadores verticales */
-	.stats-option-1 {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 1rem;
-		padding: 1.5rem;
-		margin-top: 0.5rem;
-		background: rgba(17, 24, 39, 0.6);
-		border-radius: 0.75rem;
-		backdrop-filter: blur(10px);
-		border: 1px solid rgba(34, 197, 94, 0.2);
-	}
-
-	.stats-option-1 .stat {
-		flex: 1;
-		text-align: center;
-	}
-
-	.stat-divider {
-		width: 1px;
-		height: 40px;
-		background: linear-gradient(to bottom, transparent, #e5e7eb, transparent);
-	}
-
-	/* OPCIÓN 2: Stats con iconos y cards individuales */
-	.stats-option-2 {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 0.75rem;
-		margin-top: 0.5rem;
-	}
-
-	.stat-card {
-		background: white;
-		padding: 1rem;
-		border-radius: 0.5rem;
-		border: 1px solid #e5e7eb;
-		text-align: center;
-		transition: all 0.2s;
-	}
-
-	.stat-card:hover {
-		border-color: rgba(34, 197, 94, 0.5);
-		box-shadow: 0 4px 12px rgba(34, 197, 94, 0.1);
-		transform: translateY(-2px);
-	}
-
-	.stat-card svg {
-		color: #22c55e;
-		margin-bottom: 0.5rem;
-	}
-
-	/* OPCIÓN 3: Stats minimalistas sin borde */
-	.stats-option-3 {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1.5rem;
-		padding-top: 2rem;
-		margin-top: 1rem;
-	}
-
-	.stats-option-3 .stat {
-		text-align: center;
-	}
-
-	.stat-number {
-		font-size: 1.5rem;
-		font-weight: 700;
-		color: #22c55e;
-		margin-bottom: 0.25rem;
-	}
-
-	.stat-label {
-		font-size: 0.75rem;
-		color: #d1d5db;
-		line-height: 1.3;
+	.btn-primary:active {
+		transform: translateY(-1px);
 	}
 
 	@media (min-width: 640px) {
@@ -386,7 +168,7 @@ import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 		}
 
 		.title-rotating {
-			min-width: 180px;
+			min-width: 280px;
 		}
 	}
 
@@ -403,7 +185,7 @@ import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 		}
 
 		.title-rotating {
-			min-width: 250px;
+			min-width: 380px;
 		}
 
 		.btn {
@@ -419,13 +201,13 @@ import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 		}
 
 		.title-rotating {
-			min-width: 280px;
+			min-width: 480px;
 		}
 	}
 </style>
 
 <script>
-	const words = ['Verdes', 'Limpios', 'Cuidados', 'Hermosos', 'Naturales'];
+	const words = ['Listos para Impresionar', 'Sin Preocupaciones', 'Siempre Impecables', 'Que Valorizan', 'Libres de Mantenimiento'];
 	let currentIndex = 0;
 	const rotatingWord = document.getElementById('rotating-word');
 
@@ -449,6 +231,6 @@ import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 		rotatingWord.style.transition = 'all 0.3s ease';
 	}
 
-	// Cambiar palabra cada 1.5 segundos
-	setInterval(changeWord, 1500);
+	// Cambiar palabra cada 2 segundos (más tiempo para leer frases más largas)
+	setInterval(changeWord, 2000);
 </script>

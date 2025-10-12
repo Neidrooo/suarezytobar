@@ -297,46 +297,50 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 	}
 
 	.cta-button {
-		padding: 0.625rem 1.5rem;
+		padding: 0.75rem 1.75rem;
 		background: linear-gradient(135deg, #8bc53f 0%, #7ab82e 100%);
 		color: white;
 		font-size: 0.875rem;
 		font-weight: 600;
 		text-decoration: none;
-		border-radius: 0.5rem;
-		transition: all 0.3s ease;
-		box-shadow: 0 2px 8px rgba(139, 197, 63, 0.3);
+		border-radius: 50px;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 4px 12px rgba(139, 197, 63, 0.25), 0 2px 6px rgba(139, 197, 63, 0.15);
 	}
 
 	.cta-button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(139, 197, 63, 0.4);
+		transform: translateY(-3px);
+		box-shadow: 0 8px 20px rgba(139, 197, 63, 0.35), 0 4px 10px rgba(139, 197, 63, 0.25);
 	}
 
 
 	.menu-button {
 		display: flex !important;
 		align-items: center;
-		gap: 0.3rem;
-		background: rgba(139, 197, 63, 0.25);
-		border: 1.5px solid rgba(139, 197, 63, 0.6);
-		border-radius: 0.375rem;
+		gap: 0.35rem;
+		background: linear-gradient(135deg, rgba(139, 197, 63, 0.3), rgba(139, 197, 63, 0.2));
+		border: 2px solid rgba(139, 197, 63, 0.5);
+		border-radius: 50px;
 		cursor: pointer;
-		padding: 0.5rem 0.75rem;
+		padding: 0.55rem 0.9rem;
 		color: #ffffff;
 		font-weight: 700;
 		font-size: 0.6875rem;
-		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-		transition: all 0.2s ease;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		flex-shrink: 0;
 		white-space: nowrap;
 		z-index: 110;
 		position: relative;
+		backdrop-filter: blur(10px);
+		box-shadow: 0 4px 12px rgba(139, 197, 63, 0.15);
 	}
 
 	.menu-button:hover {
-		background: rgba(139, 197, 63, 0.35);
-		border-color: rgba(139, 197, 63, 0.8);
+		background: linear-gradient(135deg, rgba(139, 197, 63, 0.4), rgba(139, 197, 63, 0.3));
+		border-color: rgba(139, 197, 63, 0.7);
+		transform: translateY(-2px);
+		box-shadow: 0 6px 16px rgba(139, 197, 63, 0.25);
 	}
 
 	.menu-button svg {
@@ -503,10 +507,10 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1rem 1.25rem;
-		background: rgba(255, 255, 255, 0.03);
-		border: 1px solid rgba(139, 197, 63, 0.2);
-		border-radius: 0.875rem;
+		padding: 1.125rem 1.5rem;
+		background: rgba(255, 255, 255, 0.04);
+		border: 1.5px solid rgba(139, 197, 63, 0.25);
+		border-radius: 1.25rem;
 		color: #ffffff;
 		text-decoration: none;
 		font-size: 1.25rem;
@@ -517,6 +521,8 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 		opacity: 0;
 		transform: translateX(50px);
 		flex-shrink: 0;
+		backdrop-filter: blur(10px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 	}
 
 	.nav-mobile.active .mobile-link {
@@ -614,21 +620,22 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 		justify-content: center;
 		gap: 0.625rem;
 		width: 100%;
-		padding: 1rem 1.5rem;
+		padding: 1.125rem 1.75rem;
 		background: linear-gradient(135deg, #8bc53f 0%, #7ab82e 100%);
 		color: white;
 		font-size: 1rem;
 		font-weight: 700;
 		text-decoration: none;
-		border-radius: 0.875rem;
-		box-shadow: 0 6px 20px rgba(139, 197, 63, 0.4);
-		transition: all 0.3s ease;
+		border-radius: 50px;
+		box-shadow: 0 8px 24px rgba(139, 197, 63, 0.4), 0 4px 12px rgba(139, 197, 63, 0.3);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		margin-bottom: 1rem;
+		letter-spacing: 0.02em;
 	}
 
 	.mobile-cta:active {
-		transform: scale(0.98);
-		box-shadow: 0 4px 12px rgba(139, 197, 63, 0.3);
+		transform: scale(0.97);
+		box-shadow: 0 6px 18px rgba(139, 197, 63, 0.35), 0 3px 8px rgba(139, 197, 63, 0.25);
 	}
 
 	.mobile-contact-info {
