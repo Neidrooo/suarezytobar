@@ -92,28 +92,24 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 				
 				<div class="mobile-menu-links">
 					<a href="#inicio" class="mobile-link" data-index="1">
-						<span class="link-number">01</span>
 						<span class="link-text">Inicio</span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 							<polyline points="9 18 15 12 9 6"></polyline>
 						</svg>
 					</a>
 					<a href="#nosotros" class="mobile-link" data-index="2">
-						<span class="link-number">02</span>
 						<span class="link-text">Nosotros</span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 							<polyline points="9 18 15 12 9 6"></polyline>
 						</svg>
 					</a>
 					<a href="#servicios" class="mobile-link" data-index="3">
-						<span class="link-number">03</span>
 						<span class="link-text">Servicios</span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 							<polyline points="9 18 15 12 9 6"></polyline>
 						</svg>
 					</a>
 					<a href="#contacto" class="mobile-link" data-index="4">
-						<span class="link-number">04</span>
 						<span class="link-text">Contacto</span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 							<polyline points="9 18 15 12 9 6"></polyline>
@@ -160,6 +156,13 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 		backdrop-filter: blur(10px);
 		padding: 0.375rem 0;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	@media (min-width: 768px) {
+		.top-bar {
+			background: rgba(17, 24, 39, 0.75);
+			backdrop-filter: blur(16px);
+		}
 	}
 
 	.top-bar-content {
@@ -223,6 +226,14 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 		background: rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(10px);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	@media (min-width: 768px) {
+		.main-header {
+			background: rgba(17, 24, 39, 0.85);
+			backdrop-filter: blur(16px);
+			border-bottom: 1px solid rgba(139, 197, 63, 0.2);
+		}
 	}
 
 	.container {
@@ -567,17 +578,9 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 		left: 100%;
 	}
 
-	.link-number {
-		font-size: 0.875rem;
-		color: #8bc53f;
-		font-weight: 600;
-		opacity: 0.7;
-	}
-
 	.link-text {
 		flex: 1;
 		text-align: left;
-		margin-left: 1rem;
 	}
 
 	.mobile-link svg {

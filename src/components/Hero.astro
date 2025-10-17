@@ -29,15 +29,39 @@ import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 <style>
 	.hero {
 		position: relative;
-		min-height: 90vh;
+		min-height: 85vh;
 		display: flex;
 		align-items: center;
-		padding: 120px 0 30px;
+		padding: 120px 0 0;
+	}
+
+	/* Degradado en la parte inferior para suavizar transición */
+	.hero::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 350px;
+		background: linear-gradient(to bottom,
+			transparent 0%,
+			rgba(15, 23, 42, 0.2) 25%,
+			rgba(15, 23, 42, 0.5) 50%,
+			rgba(15, 23, 42, 0.85) 80%,
+			rgba(15, 23, 42, 0.98) 100%
+		);
+		z-index: 1;
+		pointer-events: none;
 	}
 
 	@media (min-width: 768px) {
 		.hero {
-			padding: 140px 0 30px;
+			min-height: 90vh;
+			padding: 140px 0 0;
+		}
+
+		.hero::after {
+			height: 400px;
 		}
 	}
 
@@ -173,11 +197,6 @@ import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
 	}
 
 	@media (min-width: 768px) {
-		.hero {
-			min-height: 100vh;
-			padding: 100px 0 60px;
-		}
-
 		h1 {
 			font-size: 3.5rem;
 			margin-bottom: 2.5rem;
