@@ -3,23 +3,193 @@ import SpeedInsights from '@vercel/speed-insights/astro';
 
 interface Props {
 	title?: string;
+	description?: string;
 }
 
-const { title = 'Suarez y Tobar Limitada - Mantenimiento de Áreas Verdes y Aseo Industrial' } = Astro.props;
+const {
+	title = 'Suarez y Tobar Limitada - Servicios Profesionales de Mantenimiento de Jardines y Aseo Industrial en Santiago',
+	description = 'Empresa líder en mantenimiento de jardines, paisajismo y aseo industrial en Santiago, Chile. Más de 20 años de experiencia. Cotización gratuita. ✓ Personal certificado ✓ Equipos especializados'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.suarezytobar.cl');
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 	<head>
+		<!-- Essential Meta Tags -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Suarez y Tobar Limitada - Más de 20 años de experiencia en servicios profesionales de mantenimiento de jardines, paisajismo y aseo industrial en Santiago, Chile. RUT: 76.229.740-K" />
+
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="mantenimiento de jardines Santiago, paisajismo Chile, aseo industrial, limpieza industrial Santiago, áreas verdes, sistemas de riego, poda profesional, jardinería empresarial, mantención jardines condominios" />
+		<meta name="author" content="Suarez y Tobar Limitada" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL.toString()} />
+
+		<!-- Geo Tags for Local SEO -->
+		<meta name="geo.region" content="CL-RM" />
+		<meta name="geo.placename" content="Santiago" />
+		<meta name="geo.position" content="-33.4489;-70.6693" />
+		<meta name="ICBM" content="-33.4489, -70.6693" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL.toString()} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL('/og-image.jpg', Astro.site || 'https://www.suarezytobar.cl')} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:locale" content="es_CL" />
+		<meta property="og:site_name" content="Suarez y Tobar Limitada" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL.toString()} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={new URL('/og-image.jpg', Astro.site || 'https://www.suarezytobar.cl')} />
+
+		<!-- Additional SEO -->
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta name="googlebot" content="index, follow" />
+		<meta name="language" content="Spanish" />
+		<meta name="revisit-after" content="7 days" />
+
+		<!-- Preconnect for Performance -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - LocalBusiness Schema -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"@id": "https://www.suarezytobar.cl/#business",
+			"name": "Suarez y Tobar Limitada",
+			"legalName": "Suarez y Tobar Limitada",
+			"url": "https://www.suarezytobar.cl",
+			"description": "Empresa líder en mantenimiento de jardines, paisajismo y aseo industrial en Santiago, Chile con más de 20 años de experiencia",
+			"taxID": "76.229.740-K",
+			"telephone": "+56995221924",
+			"email": "empresasuarezytobar76@gmail.com",
+			"foundingDate": "2005",
+			"priceRange": "$$",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Santiago",
+				"addressRegion": "Región Metropolitana",
+				"addressCountry": "CL"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "-33.4489",
+				"longitude": "-70.6693"
+			},
+			"areaServed": {
+				"@type": "GeoCircle",
+				"geoMidpoint": {
+					"@type": "GeoCoordinates",
+					"latitude": "-33.4489",
+					"longitude": "-70.6693"
+				},
+				"geoRadius": "50000"
+			},
+			"serviceType": [
+				"Mantenimiento de Jardines",
+				"Paisajismo",
+				"Aseo Industrial",
+				"Sistemas de Riego",
+				"Poda Profesional",
+				"Hidrolavado",
+				"Limpieza Industrial"
+			],
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Servicios de Jardinería y Aseo Industrial",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Mantenimiento de Jardines",
+							"description": "Poda profesional, limpieza integral, fertilización y control de malezas"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Sistemas de Riego",
+							"description": "Instalación, mantenimiento y reparación de sistemas de riego eficientes"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Paisajismo Profesional",
+							"description": "Diseño y mantención de áreas verdes, bosques y canchas deportivas"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Aseo Industrial",
+							"description": "Limpieza profesional de áreas industriales y zonas de circulación"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Hidrolavado Especializado",
+							"description": "Servicios de hidrolavado para estacionamientos y áreas logísticas"
+						}
+					}
+				]
+			}
+		})} />
+
+		<!-- Organization Schema -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"@id": "https://www.suarezytobar.cl/#organization",
+			"name": "Suarez y Tobar Limitada",
+			"legalName": "Suarez y Tobar Limitada",
+			"url": "https://www.suarezytobar.cl",
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+56995221924",
+				"contactType": "customer service",
+				"email": "empresasuarezytobar76@gmail.com",
+				"areaServed": "CL",
+				"availableLanguage": ["Spanish"]
+			}
+		})} />
+
+		<!-- WebSite Schema -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"@id": "https://www.suarezytobar.cl/#website",
+			"url": "https://www.suarezytobar.cl",
+			"name": "Suarez y Tobar Limitada",
+			"description": "Servicios profesionales de mantenimiento de jardines, paisajismo y aseo industrial en Santiago, Chile",
+			"publisher": {
+				"@id": "https://www.suarezytobar.cl/#organization"
+			},
+			"inLanguage": "es-CL"
+		})} />
 	</head>
 	<body>
 		<slot />
@@ -37,13 +207,13 @@ const { title = 'Suarez y Tobar Limitada - Mantenimiento de Áreas Verdes y Aseo
 		scroll-behavior: smooth;
 		scroll-padding-top: 90px;
 	}
-	
+
 	@media (min-width: 640px) {
 		html {
 			scroll-padding-top: 100px;
 		}
 	}
-	
+
 	@media (min-width: 768px) {
 		html {
 			scroll-padding-top: 120px;

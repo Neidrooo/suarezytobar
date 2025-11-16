@@ -1,0 +1,25 @@
+# robots.txt para Suarez y Tobar Limitada
+# Servicios de mantenimiento de jardines y aseo industrial en Santiago, Chile
+
+User-agent: *
+Allow: /
+
+# Prevenir indexación de archivos del sistema
+Disallow: /api/
+Disallow: /_astro/
+
+# Sitemap location
+Sitemap: https://www.suarezytobar.cl/sitemap-index.xml
+
+# Allow specific search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay (ayuda con la carga del servidor)
+Crawl-delay: 1
