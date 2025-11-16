@@ -1,35 +1,37 @@
 ---
 // Services section
+import { Image } from 'astro:assets';
+
 const services = [
 	{
 		title: "Mantenimiento de Jardines",
 		description: "Poda profesional, limpieza integral, fertilización y control de malezas.",
-		image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80"
+		image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&q=80"
 	},
 	{
 		title: "Sistemas de Riego",
 		description: "Instalación, mantenimiento y reparación de sistemas de riego eficientes.",
-		image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80"
+		image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80"
 	},
 	{
 		title: "Paisajismo Profesional",
 		description: "Diseño y mantención de áreas verdes, bosques y canchas deportivas.",
-		image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80"
+		image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80"
 	},
 	{
 		title: "Aseo Industrial",
 		description: "Limpieza profesional de áreas industriales y zonas de circulación.",
-		image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80"
+		image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80"
 	},
 	{
 		title: "Hidrolavado Especializado",
 		description: "Servicios de hidrolavado para estacionamientos y áreas logísticas.",
-		image: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=600&q=80"
+		image: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&q=80"
 	},
 	{
 		title: "Limpieza de Instalaciones",
 		description: "Mantenimiento de áreas comunes e instalaciones especializadas.",
-		image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80"
+		image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80"
 	}
 ];
 ---
@@ -47,7 +49,17 @@ const services = [
 			{services.map((service) => (
 				<div class="service-card">
 					<div class="service-image">
-						<img src={service.image} alt={service.title} />
+						<Image
+							src={service.image}
+							alt={service.title}
+							width={800}
+							height={600}
+							format="webp"
+							quality={80}
+							loading="lazy"
+							decoding="async"
+							class="service-img"
+						/>
 						<div class="service-overlay"></div>
 					</div>
 					<div class="service-content">
@@ -159,7 +171,8 @@ const services = [
 		overflow: hidden;
 	}
 
-	.service-image img {
+	.service-image img,
+	.service-img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -167,7 +180,8 @@ const services = [
 		filter: brightness(0.95);
 	}
 
-	.service-card:hover .service-image img {
+	.service-card:hover .service-image img,
+	.service-card:hover .service-img {
 		transform: scale(1.08);
 		filter: brightness(1);
 	}
