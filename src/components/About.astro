@@ -24,7 +24,7 @@ const backgroundImageUrl = 'https://images.unsplash.com/photo-1558904541-efa843a
 		</div>
 
 		<!-- Stats Grid -->
-		<div class="stats-grid">
+		<div class="stats-grid" id="stats-grid">
 			<div class="stat-card">
 				<div class="stat-icon">
 					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -32,7 +32,7 @@ const backgroundImageUrl = 'https://images.unsplash.com/photo-1558904541-efa843a
 						<circle cx="12" cy="12" r="10"></circle>
 					</svg>
 				</div>
-				<div class="stat-number">20+</div>
+				<div class="stat-number" data-target="20" data-suffix="+">0+</div>
 				<div class="stat-label">Años de Experiencia</div>
 			</div>
 
@@ -44,7 +44,7 @@ const backgroundImageUrl = 'https://images.unsplash.com/photo-1558904541-efa843a
 						<path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
 					</svg>
 				</div>
-				<div class="stat-number">100%</div>
+				<div class="stat-number" data-target="100" data-suffix="%">0%</div>
 				<div class="stat-label">Personal Capacitado</div>
 			</div>
 
@@ -54,7 +54,7 @@ const backgroundImageUrl = 'https://images.unsplash.com/photo-1558904541-efa843a
 						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
 					</svg>
 				</div>
-				<div class="stat-number">0</div>
+				<div class="stat-number" data-target="0" data-suffix="">0</div>
 				<div class="stat-label">Política de Accidentes</div>
 			</div>
 
@@ -65,7 +65,7 @@ const backgroundImageUrl = 'https://images.unsplash.com/photo-1558904541-efa843a
 						<polyline points="22 4 12 14.01 9 11.01"></polyline>
 					</svg>
 				</div>
-				<div class="stat-number">500+</div>
+				<div class="stat-number" data-target="500" data-suffix="+">0+</div>
 				<div class="stat-label">Proyectos Completados</div>
 			</div>
 		</div>
@@ -536,3 +536,45 @@ const backgroundImageUrl = 'https://images.unsplash.com/photo-1558904541-efa843a
 		}
 	}
 </style>
+
+<script>
+	// Counter animation when stats enter viewport
+	function animateCounter(element: HTMLElement) {
+		const target = parseInt(element.getAttribute('data-target') || '0');
+		const suffix = element.getAttribute('data-suffix') || '';
+		const duration = 2000; // 2 seconds
+		const increment = target / (duration / 16); // 60fps
+		let current = 0;
+
+		const updateCounter = () => {
+			current += increment;
+			if (current < target) {
+				element.textContent = Math.floor(current) + suffix;
+				requestAnimationFrame(updateCounter);
+			} else {
+				element.textContent = target + suffix;
+			}
+		};
+
+		updateCounter();
+	}
+
+	// Intersection Observer to detect when stats enter viewport
+	const statsGrid = document.getElementById('stats-grid');
+	if (statsGrid) {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const statNumbers = entry.target.querySelectorAll('.stat-number');
+						statNumbers.forEach((stat) => animateCounter(stat as HTMLElement));
+						observer.unobserve(entry.target); // Animate only once
+					}
+				});
+			},
+			{ threshold: 0.3 } // Trigger when 30% visible
+		);
+
+		observer.observe(statsGrid);
+	}
+</script>
