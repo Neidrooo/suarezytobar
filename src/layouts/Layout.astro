@@ -1,4 +1,6 @@
 ---
+import { SpeedInsights } from '@vercel/speed-insights/astro';
+
 interface Props {
 	title?: string;
 }
@@ -21,6 +23,7 @@ const { title = 'Suarez y Tobar Limitada - Mantenimiento de Áreas Verdes y Aseo
 	</head>
 	<body>
 		<slot />
+		<SpeedInsights />
 	</body>
 </html>
 
