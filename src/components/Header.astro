@@ -1,5 +1,6 @@
 ---
 // Header component
+import { Image } from 'astro:assets';
 import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 ---
 
@@ -43,7 +44,16 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 			<div class="header-content">
 				<!-- Logo -->
 				<div class="logo">
-					<img src={logoSuarez.src} alt="Suarez y Tobar Logo" class="logo-image" />
+					<Image
+						src={logoSuarez}
+						alt="Suarez y Tobar Logo"
+						width={220}
+						height={65}
+						format="webp"
+						loading="eager"
+						fetchpriority="high"
+						class="logo-image"
+					/>
 				</div>
 
 				<!-- Desktop Navigation -->
@@ -86,7 +96,15 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 
 			<div class="mobile-menu-content">
 				<div class="mobile-menu-header">
-					<img src={logoSuarez.src} alt="Suarez y Tobar" class="mobile-logo" />
+					<Image
+						src={logoSuarez}
+						alt="Suarez y Tobar"
+						width={220}
+						height={65}
+						format="webp"
+						loading="lazy"
+						class="mobile-logo"
+					/>
 					<p class="menu-subtitle">Menú de Navegación</p>
 				</div>
 				

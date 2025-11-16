@@ -1,12 +1,24 @@
 ---
 // Hero section
 import videoSrc from '../assets/video/Video De Calidad Profesional.mp4';
+// TODO: Create a poster image from the video (first frame) and import it here
+// You can use: ffmpeg -i "Video De Calidad Profesional.mp4" -ss 00:00:01 -vframes 1 hero-poster.jpg
+// import heroPoster from '../assets/img/hero-poster.jpg';
 ---
 
 <section id="inicio" class="hero">
 	<div class="hero-background">
-		<video autoplay muted loop playsinline class="hero-video">
+		<video
+			autoplay
+			muted
+			loop
+			playsinline
+			preload="metadata"
+			class="hero-video"
+			aria-label="Video de fondo mostrando trabajo profesional de jardinería"
+		>
 			<source src={videoSrc} type="video/mp4" />
+			Tu navegador no soporta el elemento de video.
 		</video>
 		<div class="hero-overlay"></div>
 	</div>
