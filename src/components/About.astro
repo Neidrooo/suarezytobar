@@ -542,7 +542,7 @@ const backgroundImageUrl = 'https://images.unsplash.com/photo-1558904541-efa843a
 	function animateCounter(element: HTMLElement) {
 		const target = parseInt(element.getAttribute('data-target') || '0');
 		const suffix = element.getAttribute('data-suffix') || '';
-		const duration = 2000; // 2 seconds
+		const duration = 1200; // 1.2 seconds - faster animation
 		const increment = target / (duration / 16); // 60fps
 		let current = 0;
 
