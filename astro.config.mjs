@@ -3,6 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
 	site: 'https://www.suarezytobar.cl',
+	output: 'hybrid',
 	integrations: [
 		sitemap({
 			changefreq: 'weekly',

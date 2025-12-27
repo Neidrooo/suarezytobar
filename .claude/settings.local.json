@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"C:\\\\Users\\\\neidr\\\\Desktop\\\\PROYECTOS\\\\suarezytobar\" log --oneline -20)",
+      "Bash(git -C \"C:\\\\Users\\\\neidr\\\\Desktop\\\\PROYECTOS\\\\suarezytobar\" branch -a)",
+      "Bash(find:*)"
+    ]
+  }
+}
