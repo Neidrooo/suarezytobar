@@ -3,7 +3,13 @@
     "allow": [
       "Bash(git -C \"C:\\\\Users\\\\neidr\\\\Desktop\\\\PROYECTOS\\\\suarezytobar\" log --oneline -20)",
       "Bash(git -C \"C:\\\\Users\\\\neidr\\\\Desktop\\\\PROYECTOS\\\\suarezytobar\" branch -a)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git -C \"C:\\\\Users\\\\neidr\\\\Desktop\\\\PROYECTOS\\\\suarezytobar\" status --short)",
+      "Bash(rm:*)",
+      "Bash(powershell:*)",
+      "WebSearch",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm remove:*)"
     ]
   }
 }

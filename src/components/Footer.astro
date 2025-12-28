@@ -1,5 +1,6 @@
 ---
 // Footer component
+import { Image } from 'astro:assets';
 import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 ---
 
@@ -8,7 +9,7 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 		<div class="footer-main">
 			<!-- Logo y Descripción -->
 			<div class="footer-brand">
-				<img src={logoSuarez.src} alt="Suarez y Tobar Logo" class="footer-logo" />
+				<Image src={logoSuarez} alt="Suarez y Tobar Logo" class="footer-logo" width={180} height={60} />
 				<p class="brand-tagline">Transformando espacios verdes desde 2005</p>
 			</div>
 
@@ -89,9 +90,9 @@ import logoSuarez from '../assets/img/logosuarez-removebg-preview.png';
 				<span class="rut">RUT: 76.229.740-K</span>
 			</div>
 			<div class="bottom-right">
-				<a href="#privacidad">Privacidad</a>
+				<a href="/privacidad">Privacidad</a>
 				<span>•</span>
-				<a href="#terminos">Términos</a>
+				<a href="/terminos">Términos</a>
 			</div>
 		</div>
 	</div>
