@@ -11,7 +11,7 @@ const {
 	description = 'Empresa líder en mantenimiento de jardines, paisajismo y aseo industrial en Santiago, Chile. Más de 20 años de experiencia. Cotización gratuita. ✓ Personal certificado ✓ Equipos especializados'
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.suarezytobar.cl');
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://suarezytobar.cl');
 ---
 
 <!doctype html>
@@ -46,7 +46,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.suar
 		<meta property="og:url" content={canonicalURL.toString()} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content={new URL('/og-image.jpg', Astro.site || 'https://www.suarezytobar.cl')} />
+		<meta property="og:image" content={new URL('/og-image.jpg', Astro.site || 'https://suarezytobar.cl')} />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:locale" content="es_CL" />
@@ -57,7 +57,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.suar
 		<meta name="twitter:url" content={canonicalURL.toString()} />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={new URL('/og-image.jpg', Astro.site || 'https://www.suarezytobar.cl')} />
+		<meta name="twitter:image" content={new URL('/og-image.jpg', Astro.site || 'https://suarezytobar.cl')} />
 
 		<!-- Additional SEO -->
 		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -75,10 +75,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.suar
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "LocalBusiness",
-			"@id": "https://www.suarezytobar.cl/#business",
+			"@id": "https://suarezytobar.cl/#business",
 			"name": "Suarez y Tobar Limitada",
 			"legalName": "Suarez y Tobar Limitada",
-			"url": "https://www.suarezytobar.cl",
+			"url": "https://suarezytobar.cl",
 			"description": "Empresa líder en mantenimiento de jardines, paisajismo y aseo industrial en Santiago, Chile con más de 20 años de experiencia",
 			"taxID": "76.229.740-K",
 			"telephone": "+56995221924",
@@ -166,10 +166,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.suar
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "Organization",
-			"@id": "https://www.suarezytobar.cl/#organization",
+			"@id": "https://suarezytobar.cl/#organization",
 			"name": "Suarez y Tobar Limitada",
 			"legalName": "Suarez y Tobar Limitada",
-			"url": "https://www.suarezytobar.cl",
+			"url": "https://suarezytobar.cl",
 			"contactPoint": {
 				"@type": "ContactPoint",
 				"telephone": "+56995221924",
@@ -184,12 +184,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.suar
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "WebSite",
-			"@id": "https://www.suarezytobar.cl/#website",
-			"url": "https://www.suarezytobar.cl",
+			"@id": "https://suarezytobar.cl/#website",
+			"url": "https://suarezytobar.cl",
 			"name": "Suarez y Tobar Limitada",
 			"description": "Servicios profesionales de mantenimiento de jardines, paisajismo y aseo industrial en Santiago, Chile",
 			"publisher": {
-				"@id": "https://www.suarezytobar.cl/#organization"
+				"@id": "https://suarezytobar.cl/#organization"
 			},
 			"inLanguage": "es-CL"
 		})} />
