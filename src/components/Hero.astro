@@ -25,10 +25,15 @@ import heroPoster from '../assets/video/hero-poster.jpg';
 	<div class="container">
 		<div class="hero-content">
 			<h1>
-				<span class="title-text">Espacios</span>
-				<span class="title-rotating" id="rotating-word"></span>
-				<span class="title-text">que transforman</span>
+				<span class="title-text">Mantenimiento de Jardines</span>
+				<span class="title-rotating" id="rotating-word" aria-live="polite"></span>
+				<noscript><span class="title-rotating">Profesional</span></noscript>
+				<span class="title-text">en Santiago</span>
 			</h1>
+
+			<p class="hero-description">
+				Más de 20 años transformando espacios verdes. Servicios de paisajismo, aseo industrial e hidrolavado para empresas y condominios en la Región Metropolitana.
+			</p>
 
 			<div class="hero-buttons">
 				<a href="#contacto" class="btn btn-primary">Cotizar Ahora</a>
@@ -106,9 +111,27 @@ import heroPoster from '../assets/video/hero-poster.jpg';
 	}
 
 	.hero-content {
-		max-width: 36rem;
+		max-width: 42rem;
 		text-align: center;
 		margin: 0 auto;
+	}
+
+	.hero-description {
+		font-size: 1rem;
+		color: rgba(255, 255, 255, 0.9);
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media (min-width: 768px) {
+		.hero-description {
+			font-size: 1.125rem;
+			margin-bottom: 2rem;
+		}
 	}
 
 	h1 {

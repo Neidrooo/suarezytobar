@@ -9,7 +9,7 @@ Disallow: /api/
 Disallow: /_astro/
 
 # Sitemap location
-Sitemap: https://www.suarezytobar.cl/sitemap-index.xml
+Sitemap: https://suarezytobar.cl/sitemap-index.xml
 
 # Allow specific search engines
 User-agent: Googlebot
@@ -21,5 +21,21 @@ Allow: /
 User-agent: Slurp
 Allow: /
 
-# Crawl delay (ayuda con la carga del servidor)
-Crawl-delay: 1
+# Crawl delay (solo para bots que lo respetan, Google lo ignora)
+# Crawl-delay: 1
+
+# Bloquear bots de IA que entrenan modelos (protección de contenido)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
