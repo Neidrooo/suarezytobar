@@ -194,10 +194,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://suarezyt
 			},
 			"inLanguage": "es-CL"
 		})} />
+
+		<!-- Vercel Web Analytics -->
+		<Analytics />
 	</head>
 	<body>
 		<slot />
-		<Analytics />
 		<SpeedInsights />
 	</body>
 </html>
